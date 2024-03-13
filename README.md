@@ -39,6 +39,12 @@ Install using [beta.py](https://raw.githubusercontent.com/Panonim/SniperBeta/bet
 
 or use 
 `wget https://raw.githubusercontent.com/Panonim/SniperBeta/beta/beta.py`
+## 📦 Beta packages 
+
+• Discord.py
+• Requests
+• Schedule
+
 ## ✉ Support
 
 For support, email office@bluee.dev or text me using [reddit](https://www.reddit.com/user/arturcodes/).
