@@ -42,7 +42,9 @@ or use
 ## 📦 Beta packages 
 
 • Discord.py
+
 • Requests
+
 • Schedule
 
 ## ✉ Support
