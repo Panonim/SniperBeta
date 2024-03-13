@@ -35,7 +35,7 @@ Users of the bot should be aware of these risks and use it with caution.
 
 ## 📕 Installation
 
-Install using [beta.py](https://raw.githubusercontent.com/Panonim/SniperBeta/beta/beta.py)
+Download [beta.py file](https://raw.githubusercontent.com/Panonim/SniperBeta/beta/beta.py)
 
 or use 
 `wget https://raw.githubusercontent.com/Panonim/SniperBeta/beta/beta.py`
