@@ -34,10 +34,10 @@ Users of the bot should be aware of these risks and use it with caution.
 
 ## 📕 Installation
 
-Install using [beta.py](https://github.com/Panonim/DomainSniper-Bot/blob/development/beta.py)
+Install using [beta.py](https://raw.githubusercontent.com/Panonim/SniperBeta/beta/beta.py)
 
 or use 
-`wget https://github.com/Panonim/DomainSniper-Bot/blob/development/beta.py`
+`wget https://raw.githubusercontent.com/Panonim/SniperBeta/beta/beta.py`
 ## ✉ Support
 
 For support, email office@bluee.dev or text me using [reddit](https://www.reddit.com/user/arturcodes/).
