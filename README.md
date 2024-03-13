@@ -21,7 +21,7 @@ Therefore, we are not responsible for any consequences of its use, including:
 
 Users of the bot should be aware of these risks and use it with caution.
 
-### • Additional information:
+### • Additional informations:
 
     Beta phase: The beta phase is a period of software testing before its official release. During this time, the software is tested by users to identify and fix bugs.
     Code errors: Code errors are irregularities in the instructions that the bot is built from. They can lead to various problems, such as malfunctioning of the bot or its failure.
