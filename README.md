@@ -1,5 +1,6 @@
 
 # 💠 Sniper Open Beta
+### *Are you here by an mistake? [go to stable version](https://github.com/Panonim/DomainSniper-Bot)*
 
 Sniper is a tool for domain sniping its completly free.
 
