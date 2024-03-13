@@ -1,8 +1,8 @@
 import discord
 import os
 import requests
-from datetime import datetime
-import schedule  
+from datetime import datetime, timedelta
+from discord.ext import tasks
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -22,32 +22,19 @@ async def on_ready():
     user = client.get_user(USER_ID)
     if user:
         await user.send(
-            "**Whois Information Update on Startup**"
-        )
+            "Whois information will be sent to the specified channel every day.")
     channel = client.get_channel(CHANNEL_ID)
     if channel:
-        await send_whois_info(channel) 
-
-    # Schedule whois information sending for every day at a specific time (Default 10am)
-    schedule.every().day.at("10:00").do(send_whois_info, channel)
-    schedule.run_continuously(seconds=1)
+        send_whois_info.start(channel)
 
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if message.content.startswith('!whois'):
-        await send_whois_info(message.channel)
-
-
+@tasks.loop(hours=24)
 async def send_whois_info(destination):
     whois_info = await get_whois_info(DOMAIN_NAME)
     if whois_info:
         embed = discord.Embed(title=f"Whois Info for {DOMAIN_NAME}",
-                             description="",
-                             color=0x00ff00)
+                              description="",
+                              color=0x00ff00)
         embed.add_field(name="domain", value=whois_info['domain'], inline=True)
         embed.add_field(name="domain_age",
                         value=whois_info['domain_age'],
