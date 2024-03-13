@@ -47,9 +47,6 @@ or use
 
 • Schedule
 
-## ✉ Support
-
-For support, email office@bluee.dev or text me using [reddit](https://www.reddit.com/user/arturcodes/).
 
 <div align="center"><img src="https://bluee.dev/assets/Signature.svg/" height=150px width=250px alt="ArturFlis Signature"/></div>
 <div align="center">&copy; Artur Flis 2024, all rights saved.</div>
