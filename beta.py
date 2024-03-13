@@ -2,7 +2,7 @@ import discord
 import os
 import requests
 from datetime import datetime
-import schedule  # Library for scheduling tasks
+import schedule  
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -22,11 +22,14 @@ async def on_ready():
     user = client.get_user(USER_ID)
     if user:
         await user.send(
-            "**Scheduled Whois Information Delivery Activated**"
+            "**Whois Information Update on Startup**"
         )
-    # Schedule whois information sending for every day at a specific time (replace 17 with your desired hour)
-    schedule.every().day.at("17:00").do(send_whois_info, client.get_channel(CHANNEL_ID))
-    # Start the scheduler
+    channel = client.get_channel(CHANNEL_ID)
+    if channel:
+        await send_whois_info(channel) 
+
+    # Schedule whois information sending for every day at a specific time (Default 10am)
+    schedule.every().day.at("10:00").do(send_whois_info, channel)
     schedule.run_continuously(seconds=1)
 
 
