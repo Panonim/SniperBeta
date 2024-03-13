@@ -45,7 +45,6 @@ or use
 
 • Requests
 
-• Schedule
 
 
 <div align="center"><img src="https://bluee.dev/assets/Signature.svg/" height=150px width=250px alt="ArturFlis Signature"/></div>
