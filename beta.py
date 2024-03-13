@@ -15,17 +15,24 @@ CHANNEL_ID = YOUR CHANNEL ID HERE
 
 client = discord.Client(intents=intents)
 
-
 @client.event
 async def on_ready():
-    print(f'We have logged in as {client.user}')
-    user = client.get_user(USER_ID)
-    if user:
-        await user.send(
-            "Whois information will be sent to the specified channel every day.")
-    channel = client.get_channel(CHANNEL_ID)
-    if channel:
-        send_whois_info.start(channel)
+  print(f'We have logged in as {client.user}')
+  user = client.get_user(USER_ID)
+  if user:
+    await user.send(
+        "Whois information will be sent to the specified channel every day.")
+  channel = client.get_channel(CHANNEL_ID)
+  if channel:
+    await send_whois_info(channel)
+
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+
+  if message.content.startswith('!whois'):
+    await send_whois_info(message.channel)
 
 
 @tasks.loop(hours=24)
