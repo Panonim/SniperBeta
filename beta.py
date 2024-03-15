@@ -73,5 +73,5 @@ async def get_whois_info(domain):
     except KeyError as err:
         print(f'Missing key in whois info: {err}')
 
-send_whois_info.before_loop(client.wait_until_ready)  # Wait until the bot is ready
+send_whois_info.before_loop(client.wait_until_ready) 
 client.run(DISCORD_TOKEN)
